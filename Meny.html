@@ -1,17 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="Meny.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <nav class="main-nav" aria-label="main navigation">
-        <div class="container">
-          <a href="/Home.html">
-            <p>Pho-Qing Around</p>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="Utility.css">
+  <link rel="stylesheet" href="Meny.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="main-nav" aria-label="main navigation">
+    <div class="container">
+      <a href="/Home.html">
+        <p>Pho-Qing Around</p>
+      </a>
+      <button class="menu-btn" aria-controls="main-menu" aria-expanded="false" aria-label="toggle navigation">
+        <img src="/images/icons/hamburger.svg" alt="main-menu">
+      </button>
+
+      <ul id="main-menu">
+        <li>
+          <a href="/Meny.html" class="meny-link">Meny</a>
+        </li>
+        <li>
+          <a href="/FAQ.html" class="FAQ-link">About Us</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <main id="main">
+    <section>
+      <div class="container">
+        <div class="contain-dynamic-slider">
+          <div class="img-info">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. </div>
+          <div class="show-img"></div>
+        </div>
+        <div class="img-slider">
+          <img src="images/icons/arrow-left.svg" id="prev">
+          <div class="preview">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7FJBxSYViRI09gOh0C8angW-Uofq_0WCAXr1d-wq6RbDMTEE_" class="active thumbnail" alt="">
+
+            <img src="https://www.allrecipes.com/thmb/XRO7XOwqZflluq97rtvzEftrNa0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-187342-Banh-Mi-4x3-22bee17c1dfe4817adefce0ff4c218d3.jpg" class="thumbnail" alt="">
+
+            <img src="http://t0.gstatic.com/images?q=tbn:ANd9GcTrHZP6Bjy7ckVcD9KHjdowAE928ewnlJFeogCKR09oiOwahCwd" class="thumbnail" alt="">
+
+            <img src="https://statics.vinpearl.com/Vietnamese-Milk-Tea-1_1701613045.jpg" class="thumbnail" alt="">
+          </div>
+          <img src="images/icons/arrow-right.svg" id="next">
+        </div>
+
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="menu">
+          <div class="dish-1">
+            <img src="images/pho-img.jpg" alt="">
+            <img src="images/icons/star.svg" alt="">
+            <ul>
+              <li>Funny comment</li>
+              <li>Pho</li>
+              <li>Price</li>
+            </ul>
+            <button alt="pho-more">Read more</button>
+            <ul id="pho-more">
+              <li>Beskrivning:
+                <p>
+                  An aromatic noodle soup with beef, chicken or tofu.
+                </p>
+              </li>
+              <li>Ingredients:
+                <p>
+                  Lorem ipsum dolor sit amet.
+              </p></li>
+            </ul>
+          </div>
+
+          <div class="dish-2">
+            <img src="https://www.allrecipes.com/thmb/XRO7XOwqZflluq97rtvzEftrNa0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-187342-Banh-Mi-4x3-22bee17c1dfe4817adefce0ff4c218d3.jpg" alt="">
+            <img src="images/icons/star.svg" alt="">
+            <ul>
+              <li>Funny comment</li>
+              <li>Bánh mì</li>
+              <li>Price</li>
+            </ul>
+            <button alt="pho-more">Read more</button>
+            <ul id="pho-more">
+              <li>Beskrivning:
+                <p>
+                  Vietnamese baguettes filled with grilled meat, pickled vegetables and creamy sauces.
+                </p>
+              </li>
+              <li>Ingredients:
+                <p>
+                  Lorem ipsum dolor sit amet.
+              </p></li>
+            </ul>
+          </div>
+
+          <div class="dish-3">
+            <img src="http://t0.gstatic.com/images?q=tbn:ANd9GcTrHZP6Bjy7ckVcD9KHjdowAE928ewnlJFeogCKR09oiOwahCwd" alt="">
+            <img src="images/icons/star.svg" alt="">
+            <ul>
+              <li>Funny comment</li>
+              <li>Bánh xèo</li>
+              <li>Price</li>
+            </ul>
+            <button alt="pho-more">Read more</button>
+            <ul id="pho-more">
+              <li>Beskrivning:
+                <p>
+                  Crispy Vietnamese pancakes with fillings such as shrimp or pork.
+                </p>
+              </li>
+              <li>Ingredients:
+                <p>
+                  Lorem ipsum dolor sit amet.
+              </p></li>
+            </ul>
+          </div>
+
+          <div class="dish-4">
+            <img src="https://statics.vinpearl.com/Vietnamese-Milk-Tea-1_1701613045.jpg" alt="">
+            <img src="images/icons/star.svg" alt="">
+            <ul>
+              <li>Funny comment</li>
+              <li>Bubble Tea</li>
+              <li>Price</li>
+            </ul>
+            <button alt="pho-more">Read more</button>
+            <ul id="pho-more">
+              <li>Beskrivning:
+                <p>
+                  A refreshing and sweet drink with tapioca pearls in different flavors.
+                </p>
+              </li>
+              <li>Ingredients:
+                <p>
+                  Lorem ipsum dolor sit amet.
+              </p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <footer>
+          <p>FOOTER</p>
+          <a href="/FAQ.html">
+            <p>Contact us</p>
           </a>
           <button
             class="menu-btn"
