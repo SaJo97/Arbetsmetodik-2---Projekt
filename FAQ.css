@@ -1,0 +1,130 @@
+/* Första och andra raden */
+.row-1, .row-2 {
+    display: grid;
+    grid-template-columns: 1fr; /* Två kolumner: Text och Bild */
+    gap: 1.2rem; /* Mellanrum mellan kolumnerna */
+    margin-block: 3rem;
+    align-items: stretch;
+  }
+  
+  /* Bilder */
+  .row-1 img, .row-2 img {
+    width: 100%; /* Responsiva bilder */
+    height: auto;
+    border-radius: .7rem; /* Rundar hörnen */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Snygg skugga */
+  }
+  
+  /* Texten */
+  .row-1 p, .row-2 p {
+    margin-inline: auto; /* Centrerar textblocket horisontellt */
+    text-align: center; /* Centrera texten inuti blocket */
+    line-height: 1.5; /* Förbättrad läsbarhet */
+    font-size: 1rem; /* Standard textstorlek */
+    padding: 1.2rem; /* Utrymme runt texten */
+    background-color: #f9f9f9; /* Lätt bakgrundsfärg (valfritt) */
+    border-radius: .8rem; /* Rundar hörnen på textblocket */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Liten skugga för textblocket */
+    display: flex; /* Gör textblocket flexibelt */
+    align-items: center; /* Centrerar texten vertikalt */
+    height: 100%; /* Säkerställer att kortet fyller hela sin kolumn */
+  }
+  
+  
+  /* Justera container om det behövs för specifik rad */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Två kolumner för att placera text och bild */
+    gap: 1rem; /* Mellanrum mellan kolumner */
+  }
+  
+  /* För att säkerställa att layouten blir responsiv och anpassar sig till mindre skärmar */
+  @media (max-width: 768px) {
+    /* En kolumn på små skärmar */
+    .row-1, .row-2 {
+      grid-template-columns: 1fr; /* En kolumn per rad på små skärmar */
+    }
+  }
+  
+
+/* Row-3 layout */
+.row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Två lika stora kolumner i desktopvy */
+  gap: 1.2rem; /* Mellanrum mellan kolumner */
+  align-items: stretch; /* Sträck ut elementen till samma höjd */
+  margin: 1.2rem auto; /* Centrerar sektionen och ger avstånd ovan/nedan */
+  padding: 0 1.2rem; /* Sidomarginaler */
+}
+
+/* Kontaktuppgifter */
+.contact-info {
+  background-color: #f9f9f9; /* Ljus bakgrund */
+  padding: 2rem; /* Utrymme runt texten */
+  border-radius: 10px; /* Rundade hörn */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Liten skugga */
+  text-align: center; /* Centrerar innehållet */
+  line-height: 1.8rem;
+  display: flex; /* Flexlayout */
+  flex-direction: column; /* Lägg innehåll i kolumn */
+  justify-content: center; /* Centrerar vertikalt */
+}
+
+.contact-info h2 {
+  margin-bottom: 1.2rem;
+}
+
+.contact-info button {
+  margin-top: 1rem; /* Utrymme ovanför knappen */
+  padding: .8rem 1.2rem; /* Knappens inre utrymme */
+  background-color: #007bff; /* Blå färg */
+  color: #fff; /* Vit text */
+  border: none;
+  border-radius: .4rem; /* Rundade hörn */
+  cursor: pointer;
+  font-size: 1rem; /* Standardstorlek på texten */
+}
+
+.contact-info button:hover {
+  background-color: #0056b3; /* Mörkare blå vid hover */
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+  background-color: #ffffff; /* Neutral bakgrund */
+  padding: 1.2rem;
+  border: 1px solid #ddd; /* Tunn ram */
+  border-radius: .8rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Liten skugga */
+}
+
+.faq-accordion h2 {
+  margin-bottom: 1.2rem; /* Mellanrum under rubriken */
+}
+
+.faq-accordion details {
+  margin-bottom: 1rem; /* Mellanrum mellan varje fråga */
+}
+
+.faq-accordion summary {
+  cursor: pointer;
+  font-weight: bold; /* Gör frågan fetstilad */
+  margin-bottom: .4rem;
+}
+
+.faq-accordion p {
+  margin: 0; /* Ta bort extra marginaler */
+  padding: .3rem 0; /* Lite utrymme runt svaret */
+  line-height: 1.5; /* Förbättrad läsbarhet */
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .row-3 {
+    grid-template-columns: 1fr; /* En kolumn för mobil- och tabletvy */
+  }
+
+  .row-3 div {
+    margin-bottom: 1.2rem; /* Mellanrum mellan sektionerna */
+  }
+}
