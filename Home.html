@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="Utility.css">
@@ -7,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <nav class="main-nav" aria-label="main navigation">
     <div class="container">
@@ -30,24 +32,21 @@
   </nav>
   <main id="main">
     <section class="row-1">
-      <div class="container">
+      <div class="hero-container">
         <div class="intro-text">
-          <p>Welcome to Pho-Qing Around!</p>
+          <h1>Welcome to Pho-Qing Around!</h1>
           <p>A place very welcoming and traditional!</p>
           <p>Pho-get about your worries, it's time for a bowl of happiness!</p>
         </div>
+        <img class="hero-img" src="https://www.marionskitchen.com/wp-content/uploads/2021/09/Bun-Bo-Hue8635.jpg"
+          alt="Pho" />
       </div>
     </section>
 
     <section class="row-2">
       <div class="container">
         <div>
-          <button
-            class="menu-btn"
-            aria-controls="main-menu"
-            aria-expanded="false"
-            aria-label="toggle navigation"
-          >
+          <button class="menu-btn" aria-controls="main-menu" aria-expanded="false" aria-label="toggle navigation">
             <img src="/images/icons/hamburger.svg" alt="main-menu" />
           </button>
 
@@ -60,60 +59,49 @@
             </li>
           </ul>
         </div>
-      </nav>
-    </header>
+      </div>
+    </section>
 
-      <section class="row-3">
-        <div class="container">
-          <div>
-            <p>Special dishes of the week!</p>
-          </div>
-          <div class="contain-dynamic-slider">
-            <div class="img-info">
-              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem
-              ipsum dolor sit amet.
-            </div>
-            <div class="show-img"></div>
-          </div>
-          <div class="img-slider">
-            <img src="images/icons/arrow-left.svg" id="prev" />
-            <div class="preview">
-              <img
-                src="https://www.marionskitchen.com/wp-content/uploads/2021/09/Bun-Bo-Hue8635.jpg"
-                class="active thumbnail"
-                alt=""
-              />
-
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Summer_roll.jpg/640px-Summer_roll.jpg"
-                class="thumbnail"
-                alt=""
-              />
-
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Banh_Cuon_VN.jpg"
-                class="thumbnail"
-                alt=""
-              />
-
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Cha_ca_la_vong.jpg/800px-Cha_ca_la_vong.jpg"
-                class="thumbnail"
-                alt=""
-              />
-            </div>
-            <img src="images/icons/arrow-right.svg" id="next" />
-          </div>
+    <section class="row-3">
+      <div class="container">
+        <div>
+          <p>Special dishes of the week!</p>
         </div>
-      </section>
-    </main>
+        <div class="contain-dynamic-slider">
+          <div class="img-info">
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem
+            ipsum dolor sit amet.
+          </div>
+          <div class="show-img"></div>
+        </div>
+        <div class="img-slider">
+          <img src="images/icons/arrow-left.svg" id="prev" />
+          <div class="preview">
+            <img src="https://www.marionskitchen.com/wp-content/uploads/2021/09/Bun-Bo-Hue8635.jpg"
+              class="active thumbnail" alt="" />
 
-    <footer>
-      <p>FOOTER</p>
-      <a href="/FAQ.html">
-        <p>Contact us</p>
-      </a>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Summer_roll.jpg/640px-Summer_roll.jpg"
+              class="thumbnail" alt="" />
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Banh_Cuon_VN.jpg" class="thumbnail" alt="" />
+
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Cha_ca_la_vong.jpg/800px-Cha_ca_la_vong.jpg"
+              class="thumbnail" alt="" />
+          </div>
+          <img src="images/icons/arrow-right.svg" id="next" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>FOOTER</p>
+    <a href="/FAQ.html">
+      <p>Contact us</p>
+    </a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
