@@ -1,4 +1,9 @@
 /* Första och andra raden */
+#main {
+  padding-top: .7rem;
+  padding-bottom: 3rem;
+}
+
 .row-1,
 .row-2 {
   display: grid;
@@ -15,6 +20,12 @@
   height: auto;
   border-radius: 0.7rem; /* Rundar hörnen */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Snygg skugga */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth övergång vid hover */
+}
+
+.row-1 img:hover, .row-2 img:hover {
+  transform: scale(1.05); /* Öka storleken något vid hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Förstärk skuggan vid hover */
 }
 
 /* Texten */
@@ -23,7 +34,7 @@
   margin-inline: auto; /* Centrerar textblocket horisontellt */
   text-align: center; /* Centrera texten inuti blocket */
   line-height: 1.5; /* Förbättrad läsbarhet */
-  font-size: 1rem; /* Standard textstorlek */
+  font-size: 1.6rem; /* Standard textstorlek */
   padding: 1.2rem; /* Utrymme runt texten */
   background-color: #f9f9f9; /* Lätt bakgrundsfärg (valfritt) */
   border-radius: 0.8rem; /* Rundar hörnen på textblocket */
@@ -40,14 +51,7 @@
   gap: 1rem; /* Mellanrum mellan kolumner */
 }
 
-/* För att säkerställa att layouten blir responsiv och anpassar sig till mindre skärmar */
-@media (max-width: 768px) {
-  /* En kolumn på små skärmar */
-  .row-1,
-  .row-2 {
-    grid-template-columns: 1fr; /* En kolumn per rad på små skärmar */
-  }
-}
+
 
 /* Row-3 layout */
 .row-3 {
@@ -66,7 +70,9 @@
   border-radius: 10px; /* Rundade hörn */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Liten skugga */
   text-align: center; /* Centrerar innehållet */
+  font-size: 1.2rem;
   line-height: 1.8rem;
+  letter-spacing: .02rem;
   display: flex; /* Flexlayout */
   flex-direction: column; /* Lägg innehåll i kolumn */
   justify-content: center; /* Centrerar vertikalt */
@@ -74,21 +80,24 @@
 
 .contact-info h2 {
   margin-bottom: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .contact-info button {
   margin-top: 1rem; /* Utrymme ovanför knappen */
   padding: 0.8rem 1.2rem; /* Knappens inre utrymme */
-  background-color: #007bff; /* Blå färg */
+  background-color: #ff5e57; 
   color: #fff; /* Vit text */
   border: none;
   border-radius: 0.4rem; /* Rundade hörn */
   cursor: pointer;
-  font-size: 1rem; /* Standardstorlek på texten */
+  font-size: 1.2rem; /* Standardstorlek på texten */
+  font-weight: bold;
+  letter-spacing: .1rem;
 }
 
 .contact-info button:hover {
-  background-color: #0056b3; /* Mörkare blå vid hover */
+  background-color: #b7251e; /* Mörkare blå vid hover */
 }
 
 /* FAQ Accordion */
@@ -102,15 +111,18 @@
 
 .faq-accordion h2 {
   margin-bottom: 1.2rem; /* Mellanrum under rubriken */
+  font-size: 1.4rem;
 }
 
 .faq-accordion details {
   margin-bottom: 1rem; /* Mellanrum mellan varje fråga */
+  font-size: 1.2rem;
 }
 
 .faq-accordion summary {
   cursor: pointer;
-  font-weight: bold; /* Gör frågan fetstilad */
+  font-weight: 550; /* Gör frågan fetstilad */
+  letter-spacing: .02rem;
   margin-bottom: 0.4rem;
 }
 
@@ -122,6 +134,9 @@
 
 /* Responsiv design */
 @media (max-width: 768px) {
+  
+
+
   .row-3 {
     grid-template-columns: 1fr; /* En kolumn för mobil- och tabletvy */
   }
@@ -130,6 +145,69 @@
     margin-bottom: 1.2rem; /* Mellanrum mellan sektionerna */
   }
 }
+
+/* Row-1 och Row-2 layout för mobil och tablet */
+@media (max-width: 768px) {
+  /* Se till att varje sektion (row-1 och row-2) visas som en kolumn */
+  .row-1, .row-2 {
+    display: grid;
+    grid-template-columns: 1fr; /* En kolumn istället för två */
+    gap: 1rem; /* Mellanrum mellan elementen */
+  }
+
+  /* Justering av bilder i row-1 och row-2 */
+  .row-1 img, .row-2 img {
+    border-radius: 0.5rem; /* Justera rundade hörn på bilder */
+    width: 100%; /* Gör bilderna responsiva */
+  }
+
+  /* Justera texten för att centreras i små enheter */
+  .row-1 p, .row-2 p {
+    margin-inline: auto; /* Centrerar textblocket horisontellt */
+    font-size: 1.2rem; /* Minska textstorleken för små skärmar */
+    padding: 1rem; /* Minska padding för små skärmar */
+  }
+  
+  /* Se till att container blir en enkel kolumn på mobil och tablet */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; /* Gör containern till en enkel kolumn */
+    gap: 1.2rem; /* Mellanrum mellan elementen */
+  }
+}
+
+@media (max-width: 992px) {
+  /* Se till att varje sektion (row-1 och row-2) visas som en kolumn */
+  .row-1, .row-2 {
+    display: grid;
+    grid-template-columns: 1fr; /* En kolumn istället för två */
+    gap: 1rem; /* Mellanrum mellan elementen */
+  }
+
+  /* Justering av bilder i row-1 och row-2 */
+  .row-1 img, .row-2 img {
+    border-radius: 0.5rem; /* Justera rundade hörn på bilder */
+    width: 100%; /* Gör bilderna responsiva */
+  }
+
+  /* Justera texten för att centreras i små enheter */
+  .row-1 p, .row-2 p {
+    margin-inline: auto; /* Centrerar textblocket horisontellt */
+    font-size: 1.2rem; /* Minska textstorleken för små skärmar */
+    padding: 1rem; /* Minska padding för små skärmar */
+  }
+  
+  /* Se till att container blir en enkel kolumn på mobil och tablet */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; /* Gör containern till en enkel kolumn */
+    gap: 1.2rem; /* Mellanrum mellan elementen */
+  }
+}
+
+
+
+
 
 /* Footer */
 
