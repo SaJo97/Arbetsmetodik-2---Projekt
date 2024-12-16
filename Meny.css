@@ -19,6 +19,58 @@ hitta bättre bilder
   width: 30%;
 }
 
+/* MENU */
+
+.row-2 {
+
+  background-color: white; /*White background*/
+  padding: 1.125rem;
+  font-style: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+
+  .menu div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
+    margin: 2rem;
+    padding: 2rem;
+  }
+  button {
+    display: block;
+    background-color: #c20a0f;
+    color: white;
+    border: none;
+    padding: 0.625rem 0.938rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.625rem auto;
+    text-align: center;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+  button:hover {
+    background-color: #ff5e57;
+  }
+
+  @media (max-width: 480px) {
+    .menu {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 768px) {
+    .menu {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
 /* Footer */
 
 .footer {
