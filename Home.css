@@ -18,7 +18,7 @@ hitta bättre bilder
 
 /* Hero Section */
 .row-1 {
-  background-color: ;
+  background-color: #f9f9f9;
   padding: 4rem 2rem;
 }
 
@@ -202,5 +202,55 @@ hitta bättre bilder
 
   .section-2-right h2 {
     font-size: 1.8rem;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: #c20a0f; /* Röd bakgrund */
+  color: white; /* Vit text */
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.footer-info {
+  font-size: 1rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff5e57; /* Ljusröd för hover */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-top: 1rem;
+  }
+
+  .footer-links a {
+    margin: 0.5rem 0;
+    display: block;
   }
 }
