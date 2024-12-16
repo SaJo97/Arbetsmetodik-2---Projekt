@@ -64,3 +64,4 @@ favoriteButton.addEventListener('click', () => {
 });
 })
 .catch(error => console.error('Error loading menu data:', error));
+})
