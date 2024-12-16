@@ -1,5 +1,6 @@
 [
     {
+      "comment": "Pho, the only dish that can make you feel warm inside and challenge your chopstick skills at the same time!",
       "name": "Pho",
       "price": "150kr",
       "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7FJBxSYViRI09gOh0C8angW-Uofq_0WCAXr1d-wq6RbDMTEE_",
@@ -18,6 +19,7 @@
       ]
     },
     {
+      "comment": "Why did the Bánh mì break up with the sandwich? Because it found someone who really understood its layers!",
       "name": "Bánh mì",
       "price": "145kr",
       "image": "https://www.allrecipes.com/thmb/XRO7XOwqZflluq97rtvzEftrNa0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-187342-Banh-Mi-4x3-22bee17c1dfe4817adefce0ff4c218d3.jpg",
@@ -34,6 +36,7 @@
       ]
     },
     {
+      "comment": "Why did the Bánh Xèo break up with the spring roll? Because it found someone a little more 'crispy' with a 'sizzling' personality!",
       "name": "Bánh xèo",
       "price": "140kr",
       "image": "http://t0.gstatic.com/images?q=tbn:ANd9GcTrHZP6Bjy7ckVcD9KHjdowAE928ewnlJFeogCKR09oiOwahCwd",
@@ -52,6 +55,7 @@
       ]
     },
     {
+      "comment": "If bubble tea were a person, it would definitely be the fun friend who always brings the party with them!",
       "name": "Bubble Tea",
       "price": "40kr",
       "image": "https://statics.vinpearl.com/Vietnamese-Milk-Tea-1_1701613045.jpg",
