@@ -23,7 +23,7 @@ hitta bättre bilder
 
 .row-2 {
 
-  background-color: white; /*White background*/
+  background-color: white; 
   padding: 1.125rem;
   font-style: inherit;
   font-size: 1rem;
@@ -35,12 +35,21 @@ hitta bättre bilder
   }
 
   .menu {
+    background-color: #f9f9f9; 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1.25rem;
     margin: 2rem;
     padding: 2rem;
+    border-radius: 0.5rem;
+    
   }
+  .menu img{
+    width: 17.5rem;
+    height: 18.75rem;
+    object-fit: fill;
+    border-radius: 0.5rem;
+    }
   button {
     display: block;
     background-color: #c20a0f;
@@ -69,6 +78,11 @@ hitta bättre bilder
       grid-template-columns: 1fr;
     }
   }
+  @media (min-width: 768px) {
+    .menu {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  } 
 }
 
 /* Footer */
