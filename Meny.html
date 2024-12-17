@@ -33,32 +33,53 @@
   </header>
 
   <main id="main">
-    <section class="row-1">
+    <section class="section-1">
+      <h2 style="text-align:center; font-family: Arial, sans-serif; font-size: 3rem; padding-bottom: 1rem;">~ Menu ~</h2>
+
       <div class="container">
-        <div class="contain-dynamic-slider">
-          <div class="img-info">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-          </div>
-          <div class="show-img"></div>
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7FJBxSYViRI09gOh0C8angW-Uofq_0WCAXr1d-wq6RbDMTEE_" alt="Dish 1">
+          <div class="caption">Pho</div>
         </div>
-        <div class="img-slider">
-          <img src="images/icons/arrow-left.svg" id="prev">
-          <div class="preview">
-            <img
-              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7FJBxSYViRI09gOh0C8angW-Uofq_0WCAXr1d-wq6RbDMTEE_"
-              class="active thumbnail" alt="">
 
-            <img
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img
+            src="https://www.allrecipes.com/thmb/XRO7XOwqZflluq97rtvzEftrNa0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-187342-Banh-Mi-4x3-22bee17c1dfe4817adefce0ff4c218d3.jpg"
+            alt="Dish 2">
+          <div class="caption">Bánh xèo</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="http://t0.gstatic.com/images?q=tbn:ANd9GcTrHZP6Bjy7ckVcD9KHjdowAE928ewnlJFeogCKR09oiOwahCwd" alt="Dish 3">
+          <div class="caption">Bánh mì</div>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="https://statics.vinpearl.com/Vietnamese-Milk-Tea-1_1701613045.jpg" alt="Dish 4">
+          <div class="caption">Bubble Tea</div>
+        </div>
+
+        <!-- Next and Previous Buttons beside Thumbnails -->
+        <div class="row">
+          <a class="prev thumbnail-prev" onclick="plusSlides(-1)">❮</a>
+          <div class="column"><img class="demo"
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR7FJBxSYViRI09gOh0C8angW-Uofq_0WCAXr1d-wq6RbDMTEE_" onclick="currentSlide(1)"
+              alt="Pho"></div>
+          <div class="column"><img class="demo"
               src="https://www.allrecipes.com/thmb/XRO7XOwqZflluq97rtvzEftrNa0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-187342-Banh-Mi-4x3-22bee17c1dfe4817adefce0ff4c218d3.jpg"
-              class="thumbnail" alt="">
-
-            <img src="http://t0.gstatic.com/images?q=tbn:ANd9GcTrHZP6Bjy7ckVcD9KHjdowAE928ewnlJFeogCKR09oiOwahCwd"
-              class="thumbnail" alt="">
-
-            <img src="https://statics.vinpearl.com/Vietnamese-Milk-Tea-1_1701613045.jpg" class="thumbnail" alt="">
-          </div>
-          <img src="images/icons/arrow-right.svg" id="next">
+              onclick="currentSlide(2)" alt="Bánh xèo"></div>
+          <div class="column"><img class="demo"
+              src="http://t0.gstatic.com/images?q=tbn:ANd9GcTrHZP6Bjy7ckVcD9KHjdowAE928ewnlJFeogCKR09oiOwahCwd" onclick="currentSlide(3)"
+              alt="Bánh mì"></div>
+          <div class="column"><img class="demo"
+              src="https://statics.vinpearl.com/Vietnamese-Milk-Tea-1_1701613045.jpg"
+              onclick="currentSlide(4)" alt="Bubble Tea"></div>
+          <a class="next thumbnail-next" onclick="plusSlides(1)">❯</a>
         </div>
-
       </div>
     </section>
 
