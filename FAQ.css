@@ -267,7 +267,7 @@
 
 
 
-@media (max-width: 1199px) {
+@media (min-width: 0px) and (max-width: 700px) {
   .menu-btn {
     display: block; 
     position: absolute;
@@ -289,13 +289,27 @@
     list-style: none;
     padding: 0;
     display: flex; 
-    flex-direction: row;    
+    flex-direction: row;
+    justify-content: center;
+        
   }
 
   #main-menu {
     display: none; 
     list-style: none;
     padding: 0;
+    
+}
+
+.main-nav a {
+  margin-top: 0.5em;
+}
+
+.main-nav a, p{
+  font-size: 1em !important;
+  display: flex;
+  
+  
 }
 
 
@@ -308,4 +322,15 @@
   display: block; 
 
 }
+}
+
+@media (min-width: 700px) {
+  .menu-btn {
+    display: none; 
+  }
+
+  #main-menu {
+    display: flex; 
+    justify-content: space-between;
+  }
 }
