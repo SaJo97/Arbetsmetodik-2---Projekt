@@ -1,5 +1,7 @@
+// DYNAMISK FUNKTION
+
 let slideIndex = 0;
-showSlides();
+let slideTimeout; // timeout ID
 
 function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
@@ -18,11 +20,19 @@ function showSlides() {
   slides[slideIndex - 1].style.display = "block";
   thumbnails[slideIndex - 1].classList.add("active");
 
-  setTimeout(showSlides, 3000);
+  clearTimeout(slideTimeout);
+  slideTimeout = setTimeout(showSlides, 3000);
 }
 
 function plusSlides(n) {
   slideIndex += n - 1;
+  let slides = document.getElementsByClassName("mySlides"); //DOM slide access
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1; //last side
+  }
+  if (slideIndex >= slides.length) {
+    slideIndex = 0; //go first slide
+  }
   showSlides();
 }
 
@@ -31,6 +41,7 @@ function currentSlide(n) {
   showSlides();
 }
 
+showSlides();
 
 
 const menuBtn = document.querySelector(".menu-btn");
