@@ -66,7 +66,6 @@ favoriteButton.addEventListener('click', () => {
 .catch(error => console.error('Error loading menu data:', error));
 })
 
-<<<<<<< HEAD
 
 
 const menuBtn = document.querySelector(".menu-btn");
@@ -90,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-=======
 // DYNAMISK FUNKTION
 
 let slideIndex = 0;
@@ -135,4 +133,3 @@ function currentSlide(n) {
 }
 
 showSlides();
->>>>>>> 2aea52269b41d2159aff151afb32d79f2dd5a5a9
