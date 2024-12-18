@@ -12,6 +12,7 @@
     margin: auto;
     overflow: hidden;
     text-wrap: wrap;
+    border-radius: 0.5rem;
   }
 
   background-color: white; 
@@ -24,6 +25,7 @@
   .menu div:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
   }
 
   .menu {
