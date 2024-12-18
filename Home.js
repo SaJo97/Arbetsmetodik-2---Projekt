@@ -3,7 +3,7 @@
 let slideIndex = 0;
 let slideTimeout; // timeout ID
 
-function showSlides() {
+async function showSlides() {
   let slides = document.getElementsByClassName("mySlides");
   let thumbnails = document.getElementsByClassName("demo");
 
@@ -24,7 +24,7 @@ function showSlides() {
   slideTimeout = setTimeout(showSlides, 3000);
 }
 
-function plusSlides(n) {
+async function plusSlides(n) {
   slideIndex += n - 1;
   let slides = document.getElementsByClassName("mySlides"); //DOM slide access
   if (slideIndex < 0) {
@@ -36,32 +36,35 @@ function plusSlides(n) {
   showSlides();
 }
 
-function currentSlide(n) {
+async function currentSlide(n) {
   slideIndex = n - 1;
   showSlides();
 }
 
-showSlides();
+async function resetSlides() {
+  slideIndex = 0;
+  clearTimeout(slideTimeout);
+}
 
+showSlides();
 
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector("#main-menu");
 
 document.addEventListener("DOMContentLoaded", () => {
-  
   menuBtn.addEventListener("click", (event) => {
     const isExpanded = menuBtn.getAttribute("aria-expanded") === "true";
     menuBtn.setAttribute("aria-expanded", !isExpanded);
-    menu.classList.toggle("show");  
-    event.stopPropagation(); 
+    menu.classList.toggle("show");
+    event.stopPropagation();
   });
 
- 
   document.addEventListener("click", (event) => {
-   
     if (!menu.contains(event.target) && event.target !== menuBtn) {
       menu.classList.remove("show");
       menuBtn.setAttribute("aria-expanded", "false");
     }
   });
 });
+export { showSlides, resetSlides };
+//module.exports = { showSlides, resetSlides, currentSlide, plusSlides };
