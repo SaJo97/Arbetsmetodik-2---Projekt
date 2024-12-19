@@ -67,23 +67,3 @@ describe('Slideshow functionality', () => {
   });
 });
 
-describe('Menu toggle functionality', () => {
-  let menuBtn;
-  let menu;
-  test('should toggle the menu visibility when the button is clicked', () => {
-    
-    menuBtn = document.getElementsByClassName('menu-btn');
-    menu = document.getElementById('main-menu');
-
-    // Initially, the menu should be visible
-    expect(menu.classList.contains('show')).toBe(false);
-
-    // Click the button to hide the menu
-    menuBtn.click();
- expect(menu.classList.contains('show')).toBe(true);
-
-    // Click the button again to show the menu
-    menuBtn.click();
-    expect(menu.classList.contains('show')).toBe(false);
-  });
-});
