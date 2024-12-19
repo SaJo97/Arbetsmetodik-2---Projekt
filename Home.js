@@ -1,9 +1,13 @@
 // DYNAMISK FUNKTION
 
-let slideIndex = 0;
+window.plusSlides = plusSlides;
+window.showSlides = showSlides;
+window.currentSlide = currentSlide;
+
+let lastSlideIndex = 0;
 let slideTimeout; // timeout ID
 
-function showSlides() {
+function showSlides(slideIndex = 0) {
   let slides = document.getElementsByClassName("mySlides");
   let thumbnails = document.getElementsByClassName("demo");
 
@@ -12,40 +16,43 @@ function showSlides() {
     thumbnails[i].classList.remove("active");
   }
 
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
+  if (slideIndex < 0) {
+    slideIndex = slides.length - 1; // Go to last slide
+  } else if (slideIndex >= slides.length) {
+    slideIndex = 0; // Go to first slide
   }
 
-  slides[slideIndex - 1].style.display = "block";
-  thumbnails[slideIndex - 1].classList.add("active");
+  slides[slideIndex].style.display = "block";
+  thumbnails[slideIndex].classList.add("active");
+  lastSlideIndex = slideIndex;
 
   clearTimeout(slideTimeout);
-  slideTimeout = setTimeout(showSlides, 3000);
+  slideTimeout = setTimeout(() => showSlides(slideIndex + 1), 3000);
 }
 
 function plusSlides(n) {
-  slideIndex += n - 1;
+  let slideIndex = lastSlideIndex + n;
   let slides = document.getElementsByClassName("mySlides"); //DOM slide access
   if (slideIndex < 0) {
     slideIndex = slides.length - 1; //last side
+    lastSlideIndex = slideIndex
   }
   if (slideIndex >= slides.length) {
     slideIndex = 0; //go first slide
+    lastSlideIndex = slideIndex
   }
-  showSlides();
+  showSlides(slideIndex);
 }
 
 function currentSlide(n) {
-  slideIndex = n - 1;
-  showSlides();
+  const slideIndex = n - 1;
+  showSlides(slideIndex);
 }
 
 showSlides();
 
-
-const menuBtn = document.querySelector(".menu-btn");
-const menu = document.querySelector("#main-menu");
+export const menuBtn = document.querySelector(".menu-btn");
+export const menu = document.querySelector("#main-menu");
 
 document.addEventListener("DOMContentLoaded", () => {
   
@@ -65,3 +72,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+export {showSlides,plusSlides, currentSlide }
